@@ -7,12 +7,7 @@
     src: url(fonts/Geometrica.ttf);
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    width: auto;
-}
+
 #header
 {
     height: 100vh;          
@@ -89,10 +84,34 @@ body{
     margin-top: -221px;
 }
 #man{
-   
-    width: 30%;
-    margin-left: 8rem;
-    margin-top: 17rem;
+    
+    width: 40%;
+    margin-left: 13rem;
+    margin-top: 15rem;
+}
+#man{
+	animation: man 1s ease-in-out infinite alternate;
+	transform-origin: bottom;
+}
+.text{
+	animation: tex 1s ease-in-out infinite alternate;
+	transform-origin: bottom;
+}
+@keyframes tex{
+	from{
+		transform: rotateX(15deg);
+	}
+	to{
+		transform: rotateX(20deg);
+	}
+}
+@keyframes man{
+	from{
+		transform: translateX(-10px);
+	}
+	to{
+		transform: translateX(10px);
+	}
 }
 .text{
     font-family: "geo";
@@ -102,11 +121,63 @@ body{
     margin-top: -49px;
 
 }
+.butt{
+    text-align: center;
+    
+}
+#but1{
+    transition: transform .2s;
+}
+#but2{
+    transition: transform .2s;
+}
+#but1:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+#but2:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 @media(max-width:1024px){
     #man{
         width: 50%;
     margin-left: 31%;
     margin-top: 45%;
+    }
+}
+@media(max-width:850px){
+    #man{
+        margin-top: 79%;
+    }
+}
+/*@media(max-width:768px){
+    #man{
+        width: 64%;
+    margin-left: 31%;
+    margin-top: 79%;
+    }
+}*/
+@media(max-width:750px){
+    #man{
+        display: none;
+    }
+}
+@media(max-width:450px){
+    #man{
+        display: none;
+    }
+    .text{
+        font-size: 95px;
+    }
+    .navbar-brand{
+        font-size: -0.75rem;
+    }
+}
+@media(max-width:350px){
+    #man{
+        display: none;
+    }
+    .text{
+        font-size: 85px;
     }
 }
 .skills-bar p
@@ -285,8 +356,8 @@ padding-top: 10px;
 
 .social-icons
 {
-    top:50%;
-    transform: translateY(-50%);
+    top:170%;
+    transform: translateY(-450%);
     position: sticky;
     z-index: 1;
     width: 80px;
